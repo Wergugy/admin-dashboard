@@ -1,23 +1,252 @@
-div.container {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+        display: block;
+}
+
+body {
+        line-height: 1;
+}
+
+ol,
+ul {
+        list-style: none;
+}
+
+blockquote,
+q {
+        quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+        content: '';
+        content: none;
+}
+
+table {
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+
+:root {
+        --black-coffee: hsla(328, 19%, 15%, 1);
+        --sapphire-blue: hsla(201, 85%, 31%, 1);
+        --lavender-blush: hsla(346, 100%, 97%, 1);
+        --purple-mountain-majesty: hsla(287, 19%, 57%, 1);
+        --cedar-chest: hsla(8, 49%, 51%, 1);
+        --viridian-green: hsla(185, 84%, 38%, 1);
+        --tea-green: hsla(84, 43%, 82%, 1);
+        --pewter-blue: hsla(200, 19%, 65%, 1);
+        --y-in-mn-blue: hsla(219, 45%, 39%, 1);
+        --dark-cornflower-blue: hsla(230, 37%, 36%, 1);
+        --dark-slate-blue: hsla(250, 33%, 32%, 1);
+        --dark-purple: hsla(319, 35%, 21%, 1);
+
+}
+
+div.big.container {
         display: grid;
         grid-template-columns: 250px 1000px;
         grid-template-rows: 150px 600px;
-        grid-template-areas: 
-        "sidebar header"
-        "sidebar main";
+        grid-template-areas:
+                "sidebar header"
+                "sidebar main";
+}
+
+.sidebar,
+.main,
+.header {
+        border-radius: 5px;
+        box-shadow: var(--black-coffee) 4px 4px 3px;
+        border: 1px solid black;
 }
 
 .sidebar {
         grid-area: sidebar;
-        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 4fr;
+        background-color: var(--pewter-blue);
+        z-index: 1;
 }
 
 .main {
         grid-area: main;
-        border: 1px solid black;
+        background-color: var(--dark-slate-blue);
 }
 
 .header {
         grid-area: header;
-        border: 1px solid black;
+        background-color: var(--purple-mountain-majesty);
+        z-index: 2;
+
+        display: grid;
+        grid-template-areas: 
+        "search notification"
+        "user-info nav";
+        grid-template-rows: 70px 80px;
+        grid-template-columns: 400px 600px;
+        align-items: center;
+}
+
+
+.notification.container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 35px 40px 150px;
+        align-items: center;
+        justify-content: end;
+        gap: 7px;
+}
+
+div.search.container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 50px 200px;
+}
+
+div.nav button {
+        border: 2px solid var(--y-in-mn-blue);
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-right: 15px;
+        width: 100px;
+}
+
+div.nav {
+        width: fit-content;
+        justify-self: end;
+}
+
+div.user-info {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 60px 200px;
+        gap: 10px;
+}
+
+img {
+        width: 100%;
+        height: 100%;
+}
+
+.icon {
+        height: 30px;
+        width: 30px;
+}
+
+.logo {
+        height: 60px;
+        width: 60px;
+}
+
+div.logo.small {
+        height: 45px;
+        width: 45px;
 }

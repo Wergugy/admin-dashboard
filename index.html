@@ -8,14 +8,51 @@
         <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-        <div class="container">
+        <div class="big container">
                 <div class="header">
-                        <div>
-                                <label for="search"></label>
+                        <div class="search container">
+                                <label for="search">
+                                        <div class="search icon">
+                                                <img src="./images/loupe.png" alt="Search icon">
+                                        </div>
+                                </label>
                                 <input type="text" id="search" name="search">
                         </div>
+                        <div class="notification container">
+                                <div class="notification icon">
+                                        <img src="./images/notification-bell.png" alt="Notification icon">
+                                </div>
+                                <div class="logo small">
+                                        <img src="./images/tree.png" alt="Tree logo">
+                                </div>
+                                <div>Jimothy Jenkins</div>
+                        </div>
+                        <div class="user-info">
+                                <div class="logo"><img src="./images/tree.png" alt="Tree Logo"></div>
+                                <div class="user-greeting"><span>Hi there,</span><br>Jimothy Jenkins</div>
+                        </div>
+                        <div class="nav">
+                                <button class="new">New</button>
+                                <button class="share">Share</button>
+                                <button class="upload">Upload</button>
+                        </div>
                 </div>
-                <div class="sidebar"></div>
+                <div class="sidebar">
+                        <h1>Dashboard</h1>
+                        <ul>
+                                <li>Home</li>
+                                <li>Profile</li>
+                                <li>Messages</li>
+                                <li>History</li>
+                                <li>Tasks</li>
+                                <li>Communities</li>
+                        </ul>
+                        <ul>
+                                <li>Settings</li>
+                                <li>Support</li>
+                                <li>Privacy</li>
+                        </ul>
+                </div>
                 <div class="main"></div>
         </div>
 </body>
