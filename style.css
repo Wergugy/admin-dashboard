@@ -114,6 +114,13 @@ body {
 ol,
 ul {
         list-style: none;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+}
+
+li {
+        margin-top: 5px;
 }
 
 blockquote,
@@ -175,7 +182,7 @@ table {
         --dark-purple: hsla(319, 35%, 21%, 1);
 
         font-family: akaya_telivigalaregular;
-
+        
 }
 
 div.big.container {
@@ -204,6 +211,7 @@ div.big.container {
         z-index: 1;
         align-items: end;
         justify-items: center;
+        color: var(--lavender-blush);
 }
 
 .main {
@@ -227,6 +235,9 @@ div.big.container {
         grid-template-rows: 70px 80px;
         grid-template-columns: 400px 600px;
         align-items: center;
+
+        color: var(--dark-purple);
+        text-shadow: 1px 1px var(--black-coffee);
 }
 
 .projects {
@@ -293,19 +304,42 @@ div.projects div.label {
         gap: 7px;
 }
 
+.jimothy {
+        font-weight: 300;
+        font-size: 19px;
+}
+
+div.user-greeting {
+        font-weight: 300;
+        font-size: 23px;
+}
+
+div.user-greeting span {
+        font-size: 18px;
+        text-shadow: none;
+}
+
 div.search.container {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 50px 200px;
+        justify-items: center;
 }
 
 div.nav button {
-        border: 2px solid var(--y-in-mn-blue);
+        border: 2px solid var(--dark-purple);
         border-radius: 10px;
         padding: 5px 10px;
         margin-right: 15px;
         width: 100px;
         font-family: inherit;
+        background-color: var(--lavender-blush);
+        font-weight: 600;
+        font-size: 18px;
+}
+
+div.nav button:hover {
+        background-color: var(--dark-purple);
 }
 
 div.nav {
@@ -363,4 +397,13 @@ hr {
 h5 {
         font-weight: 700;
         font-size: 18px;
+}
+
+input#search {
+        border-radius: 10px;
+        border: 3px solid var(--lavender-blush);
+}
+
+input#search:focus {
+        outline: 2px solid var(--dark-purple);
 }
