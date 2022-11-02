@@ -164,7 +164,7 @@ div.big.container {
 .header {
         border-radius: 5px;
         box-shadow: var(--black-coffee) 4px 4px 3px;
-        border: 1px solid black;
+        border: 1px solid var(--black-coffee);
 }
 
 .sidebar {
@@ -179,7 +179,11 @@ div.big.container {
 .main {
         grid-area: main;
         background-color: var(--dark-slate-blue);
+        display: grid;
+        grid: 1fr 1fr / 3fr 1fr;
 }
+
+
 
 .header {
         grid-area: header;
@@ -195,6 +199,57 @@ div.big.container {
         align-items: center;
 }
 
+.projects {
+        display: grid;
+        grid: 1fr 4fr 4fr 4fr / 1fr 1fr;
+        grid-area: 1 / 1 / 3 / 2;
+        gap: 20px 0px;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 10px;
+}
+
+.card {
+        display: grid;
+        grid: 1fr 3fr 1fr / 4fr 1fr 1fr 1fr;
+        padding: 10px;
+        background-color: var(--dark-purple);
+        border-radius: 10px;
+        height: 150px;
+        width: 250px;
+}
+
+p.title {
+        grid-area: 1 / 1 / 2 / 5;
+}
+
+p:not(.title) {
+        grid-area: 2 / 1 / 3 / 5;
+}
+
+div.icon.checkmark {
+        grid-area: 3 / 2 / 4 / 3;
+}
+
+div.icon.bookmark {
+        grid-area: 3 / 3 / 4 / 4;
+}
+
+div.icon.share {
+        grid-area: 3 / 4 / 4 / 5;
+}
+
+div.projects div.label {
+        grid-area: 1 / 1 / 2 / 3;
+}
+
+.announcements.container {
+        grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending.container {
+        grid-area: 2 / 2 / 3 / 3;
+}
 
 .notification.container {
         display: grid;
