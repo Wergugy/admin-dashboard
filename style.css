@@ -134,6 +134,32 @@ table {
         border-spacing: 0;
 }
 
+@font-face {
+        font-family: 'akaya_telivigalaregular';
+        src: url(./fonts/akayatelivigala-regular-webfont.woff2) format('woff2'),
+                url(./fonts/akayatelivigala-regular-webfont.woff) format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'condimentregular';
+        src: url('condiment-regular-webfont.woff2') format('woff2'),
+                url('condiment-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+}
+
+@font-face {
+        font-family: 'poor_storyregular';
+        src: url('poorstory-regular-webfont.woff2') format('woff2'),
+                url('poorstory-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+}
+
 :root {
         --black-coffee: hsla(328, 19%, 15%, 1);
         --sapphire-blue: hsla(201, 85%, 31%, 1);
@@ -147,6 +173,8 @@ table {
         --dark-cornflower-blue: hsla(230, 37%, 36%, 1);
         --dark-slate-blue: hsla(250, 33%, 32%, 1);
         --dark-purple: hsla(319, 35%, 21%, 1);
+
+        font-family: akaya_telivigalaregular;
 
 }
 
@@ -172,8 +200,10 @@ div.big.container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 4fr;
-        background-color: var(--pewter-blue);
+        background-color: var(--dark-purple);
         z-index: 1;
+        align-items: end;
+        justify-items: center;
 }
 
 .main {
@@ -191,9 +221,9 @@ div.big.container {
         z-index: 2;
 
         display: grid;
-        grid-template-areas: 
-        "search notification"
-        "user-info nav";
+        grid-template-areas:
+                "search notification"
+                "user-info nav";
         grid-template-rows: 70px 80px;
         grid-template-columns: 400px 600px;
         align-items: center;
@@ -203,7 +233,7 @@ div.big.container {
         display: grid;
         grid: 1fr 4fr 4fr 4fr / 1fr 1fr;
         grid-area: 1 / 1 / 3 / 2;
-        gap: 20px 0px;
+        gap: 10px 0px;
         align-items: center;
         justify-items: center;
         margin-bottom: 10px;
@@ -213,7 +243,7 @@ div.big.container {
         display: grid;
         grid: 1fr 3fr 1fr / 4fr 1fr 1fr 1fr;
         padding: 10px;
-        background-color: var(--dark-purple);
+        background-color: var(--pewter-blue);
         border-radius: 10px;
         height: 150px;
         width: 250px;
@@ -221,10 +251,13 @@ div.big.container {
 
 p.title {
         grid-area: 1 / 1 / 2 / 5;
+        font-size: 24px;
+        font-weight: 700;
 }
 
-p:not(.title) {
+.projects p:not(.title) {
         grid-area: 2 / 1 / 3 / 5;
+        font-size: 20px;
 }
 
 div.icon.checkmark {
@@ -272,6 +305,7 @@ div.nav button {
         padding: 5px 10px;
         margin-right: 15px;
         width: 100px;
+        font-family: inherit;
 }
 
 div.nav {
@@ -292,8 +326,8 @@ img {
 }
 
 .icon {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 20px;
 }
 
 .logo {
@@ -304,4 +338,29 @@ img {
 div.logo.small {
         height: 45px;
         width: 45px;
+}
+
+div.label,
+h1 {
+        margin: 5px;
+        font-weight: 900;
+        font-size: 28px;
+}
+
+hr {
+        width: 200px;
+        border: 1px solid var(--tea-green);
+        border-radius: 5px;
+}
+
+.content {
+        background-color: var(--pewter-blue);
+        border-radius: 10px;
+        padding: 10px;
+        margin-right: 10px;
+}
+
+h5 {
+        font-weight: 700;
+        font-size: 18px;
 }
